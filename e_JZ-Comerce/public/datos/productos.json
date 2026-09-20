@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mate",
+        "precio": 1000, 
+        "descripcion": "Mate de acero inoxidable con bombilla",
+        "stock": 10,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2_2X_743091-MLA52216818792_102022-F.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Termo",
+        "precio": 2000, 
+        "descripcion": "Termo de acero inoxidable con tapa a rosca",
+        "stock": 5,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2_2X_743091-MLA52216818792_102022-F.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Yerbera",
+        "precio": 1500, 
+        "descripcion": "Yerbera de acero inoxidable con tapa a rosca",
+        "stock": 8,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2_2X_743091-MLA52216818792_102022-F.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "Azucarera",
+        "precio": 1200, 
+        "descripcion": "Azucarera de acero inoxidable con tapa a rosca",
+        "stock": 12,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2_2X_743091-MLA52216818792_102022-F.webp"
+    },
+    {
+        "id": 5,
+        "nombre": "Cucharita",
+        "precio": 500, 
+        "descripcion": "Cucharita de acero inoxidable",
+        "stock": 20,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2_2X_743091-MLA52216818792_102022-F.webp"
+    }
+
+]
