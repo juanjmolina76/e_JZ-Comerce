@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { ItemList } from "./ItemList";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        fetch ('../../public/datos/productos.json')
+        fetch ('/datos/productos.json')
         .then(res => res.json())
         .then((datos) => setProductos(datos))
     }, []);
