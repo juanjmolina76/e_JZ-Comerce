@@ -1,10 +1,29 @@
 .item {
-    background-color: pink;
-    border: 1px solid #ddd;
+
+display: flex;
+margin: auto 3em;
+margin-bottom: 1em;
+margin-top: 1em;
+
+flex-direction: row;
+flex-wrap: wrap;
+
+justify-content: space-between;
+
+padding: 10px;
+background-color: rgb(134, 101, 101);
+border-radius:  10px;
+border-top-right-radius: 60px;  
+border-bottom-left-radius: 60px;
+box-shadow:  -7px -7px 20px rgba(0, 0, 0, 0.2),
+             -7px -7px 20px rgba(0, 0, 0, 0.2);
+
+    background-color: yellow    ;
+    border: 1px solid grey;
 }
 
 .item h2 {
-    background-color: brown ;
+    background-color: orange;
     font-size: 1.2rem;
     margin: 0;
 }
