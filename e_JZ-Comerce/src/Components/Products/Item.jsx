@@ -1,8 +1,9 @@
-const Item  = ({ product }) => {
+const Item  = ({ nombre, precio, descripcion }) => {
   return (
     <div className="item">
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
+      <h2>{nombre}</h2>
+      <p>{descripcion}</p>
+      <p>Precio: AR${precio}</p>
     </div>
     );
 };
