@@ -1,11 +1,11 @@
-const Item = ({id, nombre, precio, descripcion,  stock, imagen}) => {
-    return (
-    <div>
-        <h1>{nombre}: ${precio}</h1> 
-    </div>    
-    )
-;
-
-}
+const Item  = ({ product }) => {
+  return (
+    <div className="item">
+      <h2>{product.name}</h2>
+      <p>{product.description}</p>
+    </div>
+    );
+};
 
 export default Item;
+
