@@ -1,0 +1,10 @@
+.item {
+    background-color: pink;
+    border: 1px solid #ddd;
+}
+
+.item h2 {
+    background-color: brown ;
+    font-size: 1.2rem;
+    margin: 0;
+}
