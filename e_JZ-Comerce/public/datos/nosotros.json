@@ -4,8 +4,8 @@
         "nombre": "Jose",
         "apellido": "Zambrano",
         "edad": 30,
-        "profesion": "Desarrollador Web",
-        "descripcion": "Soy un apasionado del desarrollo web y me encanta crear aplicaciones interactivas y funcionales. Me especializo en React y disfruto trabajando en proyectos que desafían mis habilidades y me permiten aprender cosas nuevas.",
+        "profesion": "Experto en implementos y accesorios para Yerba Mate",
+        "descripcion": "Apasionado de la investigación de cultivos de yerba mate y me encanta compartir mi conocimiento con otros entusiastas de esta bebida.incorporando productos de calidad y diseño innovador para mejorar la experiencia de disfrutar del mate.",
         "imagen": "Jose.png"
     },
     {
@@ -13,8 +13,8 @@
         "nombre": "Lila",
         "apellido": "Gonzalez",
         "edad": 28,
-        "profesion": "Diseñadora Gráfica",
-        "descripcion": "Soy una diseñadora gráfica con experiencia en la creación de identidades visuales y diseño de interfaces. Me apasiona el diseño y siempre busco nuevas formas de expresar ideas a través de la creatividad.",
+        "profesion": "Markenting y Diseño Gráfico",
+        "descripcion": "Soy Diseñadora gráfica con experiencia en marketing y diseño de interfaces. Me apasiona el diseño y siempre busco nuevas formas de expresar ideas a través de la creatividad.",
         "imagen": "Lila.png"
     },
     {
@@ -22,8 +22,8 @@
         "nombre": "Ricardo",
         "apellido": "Ramirez",
         "edad": 35,
-        "profesion": "Desarrollador Backend",
-        "descripcion": "Soy un desarrollador backend con experiencia en la creación de APIs y sistemas escalables. Me gusta trabajar con bases de datos y optimizar el rendimiento de las aplicaciones.",
+        "profesion": "Desarrollador de Productos",
+        "descripcion": "Diseñadora gráfica con experiencia en marketing y diseño de interfaces. Me apasiona el diseño y siempre busco nuevas formas de expresar ideas a través de la creatividad.",
         "imagen": "Ricardo.png"
     },
     {
@@ -31,8 +31,8 @@
         "nombre": "Sele",
         "apellido": "Martinez",
         "edad": 32,
-        "profesion": "Especialista en Marketing Digital",
-        "descripcion": "Soy especialista en marketing digital y me encanta ayudar a las empresas a crecer a través de estrategias efectivas en redes sociales y publicidad en línea. Me apasiona el análisis de datos y la optimización de campañas.",
+        "profesion": "Especialista logistica y marketing digital",
+        "descripcion": "Especialista en marketing y logistica en productos de produccion nacional. Admas de la produccion de accesorios, parte de la prodccion proveniente de zonas rurales.",
         "imagen": "Sele.png"
     }
 
