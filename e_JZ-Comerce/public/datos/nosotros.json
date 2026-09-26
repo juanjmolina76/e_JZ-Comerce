@@ -1,26 +1,39 @@
 [
     {
-        "nombre": "Juan",
+        "id": 1,
+        "nombre": "Jose",
         "apellido": "Zambrano",
         "edad": 30,
         "profesion": "Desarrollador Web",
         "descripcion": "Soy un apasionado del desarrollo web y me encanta crear aplicaciones interactivas y funcionales. Me especializo en React y disfruto trabajando en proyectos que desafían mis habilidades y me permiten aprender cosas nuevas.",
-        "imagen": "juan.jpg"
+        "imagen": "Jose.png"
     },
     {
-        "nombre": "Maria",
+        "id": 2,
+        "nombre": "Lila",
         "apellido": "Gonzalez",
         "edad": 28,
-        "profesion": "Diseñadora UX/UI",
-        "descripcion": "Me dedico al diseño de experiencias de usuario y interfaces atractivas. Me encanta combinar la creatividad con la funcionalidad para crear productos digitales que sean intuitivos y agradables de usar.",
-        "imagen": "maria.jpg"
+        "profesion": "Diseñadora Gráfica",
+        "descripcion": "Soy una diseñadora gráfica con experiencia en la creación de identidades visuales y diseño de interfaces. Me apasiona el diseño y siempre busco nuevas formas de expresar ideas a través de la creatividad.",
+        "imagen": "Lila.png"
     },
     {
-        "nombre": "Carlos",
+        "id": 3,
+        "nombre": "Ricardo",
         "apellido": "Ramirez",
         "edad": 35,
         "profesion": "Desarrollador Backend",
-        "descripcion": "Soy un desarrollador backend con experiencia en Node.js y bases de datos. Me apasiona optimizar el rendimiento de las aplicaciones y asegurarme de que funcionen sin problemas en cualquier entorno.",
-        "imagen": "carlos.jpg"
+        "descripcion": "Soy un desarrollador backend con experiencia en la creación de APIs y sistemas escalables. Me gusta trabajar con bases de datos y optimizar el rendimiento de las aplicaciones.",
+        "imagen": "Ricardo.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Sele",
+        "apellido": "Martinez",
+        "edad": 32,
+        "profesion": "Especialista en Marketing Digital",
+        "descripcion": "Soy especialista en marketing digital y me encanta ayudar a las empresas a crecer a través de estrategias efectivas en redes sociales y publicidad en línea. Me apasiona el análisis de datos y la optimización de campañas.",
+        "imagen": "Sele.png"
     }
+
 ]

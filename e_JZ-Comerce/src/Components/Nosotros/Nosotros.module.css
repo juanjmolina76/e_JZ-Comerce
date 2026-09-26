@@ -1,0 +1,17 @@
+.nosotros {
+    
+    display: flex;
+    flex-direction: row;
+    margin: auto 3em;
+    margin-bottom: 1em; 
+    margin-top: 1em;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+}
+
+img {
+    width: 10rem;
+    border-radius: 50%;
+    margin-right: 20px;
+}

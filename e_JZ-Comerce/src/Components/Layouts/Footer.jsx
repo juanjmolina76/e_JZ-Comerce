@@ -1,3 +1,5 @@
+import NotrosListContainer from "../Nosotros/NosotrosListContainer";
+
 const Footer = () => {
   return (
     <div>
@@ -13,7 +15,9 @@ const Footer = () => {
             <li>Ciudad 2</li>
             <li>Ciudad 3</li>
         </ul>
+        <NotrosListContainer/>
     </div>
+    
     )
 }
 export default Footer;
