@@ -1,7 +1,8 @@
 .nosotros {
     
     display: flex;
-    flex-direction: row;
+    flex-direction: column ;
+  
     margin: auto 3em;
     margin-bottom: 1em; 
     margin-top: 1em;
@@ -12,6 +13,7 @@
 
 img {
     width: 10rem;
+    align-self: center;
     border-radius: 50%;
     margin-right: 20px;
 }
