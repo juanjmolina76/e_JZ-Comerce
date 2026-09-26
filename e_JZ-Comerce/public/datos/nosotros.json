@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Juan",
+        "apellido": "Zambrano",
+        "edad": 30,
+        "profesion": "Desarrollador Web",
+        "descripcion": "Soy un apasionado del desarrollo web y me encanta crear aplicaciones interactivas y funcionales. Me especializo en React y disfruto trabajando en proyectos que desafían mis habilidades y me permiten aprender cosas nuevas.",
+        "imagen": "juan.jpg"
+    },
+    {
+        "nombre": "Maria",
+        "apellido": "Gonzalez",
+        "edad": 28,
+        "profesion": "Diseñadora UX/UI",
+        "descripcion": "Me dedico al diseño de experiencias de usuario y interfaces atractivas. Me encanta combinar la creatividad con la funcionalidad para crear productos digitales que sean intuitivos y agradables de usar.",
+        "imagen": "maria.jpg"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "Ramirez",
+        "edad": 35,
+        "profesion": "Desarrollador Backend",
+        "descripcion": "Soy un desarrollador backend con experiencia en Node.js y bases de datos. Me apasiona optimizar el rendimiento de las aplicaciones y asegurarme de que funcionen sin problemas en cualquier entorno.",
+        "imagen": "carlos.jpg"
+    }
+]
