@@ -22,12 +22,13 @@ box-shadow:  -7px -7px 20px rgba(0, 0, 0, 0.2),
 }
 
 img{
+    transition: transform 1s ease;
     width: 10rem;
     border-radius: 50px;
     margin-right: 10px;
 }
-.img:hover{
-    transform:  scale(1.5);
+.item img:hover{
+    transform:  scale(1.9);
 }
 
 .item h2 {
@@ -45,7 +46,7 @@ button {
   border-radius: 25px;
   padding: 10px 25px;
   font-weight: bold;
-  color: white;
+  color: rgb(126, 113, 113);
   /*width: 100%;*/
 }
 button:hover {

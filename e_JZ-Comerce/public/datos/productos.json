@@ -19,7 +19,7 @@
         "id": 3,
         "nombre": "Yerbera",
         "precio": 1500, 
-        "descripcion": "Yerbera de acero inoxidable con tapa a rosca",
+        "descripcion": "Yerbera de cuero con cierre metalico inoxidable",
         "stock": 8,
         "imagen": "yerbera.png"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "nombre": "Azucarera",
         "precio": 1200, 
-        "descripcion": "Azucarera de acero inoxidable con tapa a rosca",
+        "descripcion": "Azucarera de cuero con cierre metalico inoxidable",
         "stock": 12,
         "imagen": "azucarera.png"
     },
