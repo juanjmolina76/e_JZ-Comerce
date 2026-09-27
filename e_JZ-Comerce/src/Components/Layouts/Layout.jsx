@@ -1,14 +1,14 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
-
+//elimino el  children y lo reempazo por outlet
 const Layout = () => {
   return (
     <div >
         <Header/>
         <main>
 
-          // elimino el  children y lo reempazo por outlet
+          
           
           <Outlet/>
 
