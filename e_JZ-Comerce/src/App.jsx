@@ -1,21 +1,24 @@
-
 import './App.css';
 import Inicio from './Components/Inicio.jsx';
 import Layout from './Components/Layouts/Layout.jsx';
 import ItemListContainer from './Components/Products/ItemListContainer.jsx';
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+
+const App = () => {
   return (
-    <>  
-    <Layout>
-      {     }
+    <>
+    <Routes>  
+      <Route element= {<Layout/>}>
+        <Route path="/" element={<h1>Mate Libre</h1>}/>
+        <Route path="/contacto" element={<h1>CONTACTO</h1>}/>
+        <Route path="/inicio" element={<Inicio/>}/>
         
-      
-      <Inicio/>
-      <ItemListContainer/>
-      </Layout>
-      </>
+        <Route path="/productos" element= {<ItemListContainer/>}/>
+      </Route>  
+    </Routes>
+    </>
   );
-}
+};
 
 export default App

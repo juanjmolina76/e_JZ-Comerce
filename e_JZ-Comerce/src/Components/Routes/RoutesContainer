@@ -1,0 +1,8 @@
+import { Routes, Route } from "react-router-dom"
+
+const RoutesContainer = () => {
+
+
+}
+
+export default RoutesContainer;

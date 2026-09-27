@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NotrosListContainer from "../Nosotros/NosotrosListContainer";
 
 const Footer = () => {
@@ -5,8 +6,8 @@ const Footer = () => {
     <div>
 
         <p>© 2024 e_JZ-Comerce. Todos los derechos reservados.</p>
-        <a href="https://www.ejemplo.com/terminos" target="_blank" rel="noopener noreferrer">Términos y condiciones</a>
-        <a href="https://www.ejemplo.com/contacto" target="_blank" rel="noopener noreferrer">contacto@e_JZ-Comerce.com</a>
+        <Link to="/terminos" target="_blank" rel="noopener noreferrer">Términos y condiciones</Link>
+        <Link to="/contactos" target="_blank" rel="noopener noreferrer">contacto@e_JZ-Comerce.com</Link>
         <br />     
         <br />  
         <p>Sucursales</p>

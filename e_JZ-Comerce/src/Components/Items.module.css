@@ -3,8 +3,10 @@ display: flex;
 margin: auto 3em;
 margin-bottom: 1em;
 margin-top: 1em;
+
 flex-direction: row;
 flex-wrap: wrap;
+align-content: center;
 justify-content: space-between;
 padding: 20px;
 background-color: rgb(134, 101, 101);
@@ -41,10 +43,11 @@ button {
   justify-content: center;/**/
   align-items: center;/**/
   margin: 3px;
+  max-height: 50px;
   background-color: #ffd903;
   border: none;
   border-radius: 25px;
-  padding: 10px 25px;
+  padding: 20px 25px;
   font-weight: bold;
   color: rgb(126, 113, 113);
   /*width: 100%;*/

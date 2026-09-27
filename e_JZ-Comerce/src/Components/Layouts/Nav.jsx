@@ -1,10 +1,10 @@
-import Link from './Link';
+import Links from './Links';
 
 const Nav = () => {
     return (
         <div>
             <nav>
-                <Link />
+                <Links />
             </nav>
         </div>
     );

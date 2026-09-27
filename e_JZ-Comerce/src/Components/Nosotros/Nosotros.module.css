@@ -11,6 +11,11 @@
     margin: 10px;
 }
 
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+}
+
 img {
     width: 10rem;
     align-self: center;
