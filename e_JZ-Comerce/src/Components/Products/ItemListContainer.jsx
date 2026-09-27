@@ -16,8 +16,8 @@ const ItemListContainer = () => {
                     })
         .then(datos => setProductos(datos))
         .catch (error => setError(error.message))
-        .finaly (() => setCargando (false))
-    }, []);
+        .finally (() => setCargando (false))
+    }, [])
     return (
         <ItemList productos= {productos} />
     )
