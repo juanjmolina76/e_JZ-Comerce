@@ -5,7 +5,7 @@ const Item  = ({ nombre, precio, descripcion, stock, imagen}) => {
  const [contador, setContador] = useState(0);
  
  const incrementar = () => {if (contador < stock) setContador(contador + 1)};
- const decrementar = () => {if (contador > 1) setContador(contador - 1)};
+ const decrementar = () => {if (contador > 0) setContador(contador - 1)};
 
 
   return (
@@ -16,6 +16,7 @@ const Item  = ({ nombre, precio, descripcion, stock, imagen}) => {
       <p>Precio: AR${precio}</p>
       <p>Stock: {stock}</p>
       <br/>
+      
       <button onClick={incrementar}> + </button>
       <p>{contador}</p>
       <button onClick={decrementar}> - </button>

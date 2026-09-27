@@ -17,14 +17,37 @@ box-shadow:  -7px -7px 20px rgba(0, 0, 0, 0.2),
     background-color: yellow    ;
     border: 1px solid grey;
 }
+.item:hover{
+    background-color: rgb(255, 255, 96);
+}
 
 img{
     width: 10rem;
     border-radius: 50px;
     margin-right: 10px;
 }
+.img:hover{
+    transform:  scale(1.5);
+}
 
 .item h2 {
     font-size: 1.2rem;
     margin: 0;
+}
+
+button {
+  display: flex;/**/
+  justify-content: center;/**/
+  align-items: center;/**/
+  margin: 3px;
+  background-color: #ffd903;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: bold;
+  color: white;
+  /*width: 100%;*/
+}
+button:hover {
+     background-color: rgb(255, 225, 0);
 }
