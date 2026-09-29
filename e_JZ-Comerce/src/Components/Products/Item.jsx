@@ -1,5 +1,6 @@
 import { useState } from "react";
 import estilo from '../Items.module.css';    
+import { Link } from "react-router-dom";
 
 const Item  = ({ nombre, precio, descripcion, stock, imagen}) => {
  const [contador, setContador] = useState(0);
@@ -20,6 +21,8 @@ const Item  = ({ nombre, precio, descripcion, stock, imagen}) => {
       <button onClick={incrementar}> + </button>
       <p>{contador}</p>
       <button onClick={decrementar}> - </button>
+
+      <Link to= "/producto/{$id}">Ver Detalle</Link>
      
     </div>
     );
