@@ -13,7 +13,7 @@ const DetalleProducto = () => {
     fetch('/datos/productos.json/${id}')
         .then(res => res.json())
         .then(datos => setProducto(datos));
-
+//FILTRAR EL JSON por el id
 //datos?.find(p => String(p.id) === id) ?? {};
 
  },[id]);
