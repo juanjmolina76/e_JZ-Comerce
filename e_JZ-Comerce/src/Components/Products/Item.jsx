@@ -2,7 +2,7 @@ import { useState } from "react";
 import estilo from '../Items.module.css';    
 import { Link } from "react-router-dom";
 
-const Item  = ({ nombre, precio, descripcion, stock, imagen}) => {
+const Item  = ({ id, nombre, precio, descripcion, stock, imagen}) => {
  const [contador, setContador] = useState(0);
  
  const incrementar = () => {if (contador < stock) setContador(contador + 1)};
@@ -12,7 +12,7 @@ const Item  = ({ nombre, precio, descripcion, stock, imagen}) => {
   return (
     <div className={estilo.item}>
       <h2 >{nombre}</h2>
-      <img src={('./datos/images/' + imagen)} alt={nombre} />
+      <img src={(`./datos/images/${imagen}`)} alt={nombre} />
       <p>{descripcion}</p>
       <p>Precio: AR${precio}</p>
       <p>Stock: {stock}</p>
@@ -22,7 +22,7 @@ const Item  = ({ nombre, precio, descripcion, stock, imagen}) => {
       <p>{contador}</p>
       <button onClick={decrementar}> - </button>
 
-      <Link to= "/producto/{$id}">Ver Detalle</Link>
+      <Link to= {`/producto/${id}`}>Ver Detalle</Link>
      
     </div>
     );
