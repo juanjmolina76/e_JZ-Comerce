@@ -12,7 +12,7 @@ const Footer = () => {
         <br />  
         <p>Sucursales</p>
         <ul>
-            <li>Ciudad 1</li>
+            <li>Ciudad 1:</li>
             <li>Ciudad 2</li>
             <li>Ciudad 3</li>
         </ul>
