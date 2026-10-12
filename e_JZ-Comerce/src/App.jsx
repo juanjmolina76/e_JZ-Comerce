@@ -4,6 +4,7 @@ import Layout from './Components/Layouts/Layout.jsx';
 import ItemListContainer from './Components/Products/ItemListContainer.jsx';
 import DetalleProducto from './Components/Products/DetalleProducto.jsx';
 import { Routes, Route } from "react-router-dom";
+import Carrito from './Pages/Carrito';
 
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
         <Route path="/inicio" element={<Inicio/>}/>
         <Route path="/productos" element= {<ItemListContainer/>}/>
         <Route path="/producto/:id" element={<DetalleProducto/>}/>
-        <Route path="/Carrito" element={<h1>Carrito</h1>}/>
+        <Route path="/carrito" element={<Carrito/>}/>
         
       </Route>  
     </Routes>
