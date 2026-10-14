@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import NotrosListContainer from "../Nosotros/NosotrosListContainer";
+import estilo from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div>
+    <div className={estilo.footer}>
 
         <p>© 2024 e_JZ-Comerce. Todos los derechos reservados.</p>
         <Link to="/terminos" target="_blank" rel="noopener noreferrer">Términos y condiciones</Link>
