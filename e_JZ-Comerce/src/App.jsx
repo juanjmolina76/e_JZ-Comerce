@@ -5,6 +5,7 @@ import ItemListContainer from './Components/Products/ItemListContainer.jsx';
 import DetalleProducto from './Components/Products/DetalleProducto.jsx';
 import { Routes, Route } from "react-router-dom";
 import Carrito from './Pages/Carrito';
+import Productos from './Components/Products/Productos.jsx';
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
     <>
     <Routes>  
       <Route element= {<Layout/>}>
-        <Route path="/" element={<h1>Mate Libre</h1>}/>
+        <Route path="/" element={<Productos/>}/>
         <Route path="/contacto" element={<h1>CONTACTO</h1>}/>
         <Route path="/inicio" element={<Inicio/>}/>
         <Route path="/productos" element= {<ItemListContainer/>}/>
