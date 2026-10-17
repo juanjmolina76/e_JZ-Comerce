@@ -11,34 +11,37 @@ const DetalleProducto = () => {
  const { agregarACarrito } = useCarrito();
 
  const [producto, setProducto] = useState(null);
- const [loading, setLoading] = useState(true);
+ const [cargando, setCargando] = useState(true);
  const [error,setError] = useState(null);
 
- const manejarAgregarAlCarrito =() => {
+ useEffect (() => { 
+    const fetchProducto = async () => {
+        try {
+    setCargando(true);
+        const docRef = doc(db, "productos", id);
+        const docSnap = await getDoc(docRef);  
+        if (docSnap.exists()) {
+            setProducto({ id: docSnap.id, ...docSnap.data() });
+        } else {
+            setError("Producto no encontrado");
+        }
+    }   catch (error) {
+            console.error("Error al obtener el producto de Firestore:", error);
+            setError("Error al cargar el producto");
+    }   finally {
+            setCargando(false);
+        }
+    };
+    fetchProducto();
+    },[id]);
 
+
+ const manejarAgregarAlCarrito =() => {
+// al venir de firestore, las propiedades  ya se llaman: nombre, precio e imagen
     agregarACarrito({ producto, cantidad: 1 });
  }
 
-
-
- useEffect (() => { 
-    setLoading(true);
-    setError(null);
-
-    fetch('/datos/productos.json')
-        .then((res) =>{
-            if(!res.ok) throw new Error ("No se pudo cargar el producto");
-            return res.json();
-        })
-        .then((datos) => {
-        const encontrado = datos.find((p) => String(p.id) === id);
-        setProducto(encontrado || null);
-        })
-        .catch (error => setError(error.message))
-        .finally(() => setLoading(false));
- },[id]);
-
-if (loading) return <p>Cargando...</p>;
+if (cargando) return <p>Cargando detalle de producto...</p>;
 if (error) return <p>{error}</p>;
 if (!producto) return <p>Producto no encontrado</p>;
 
