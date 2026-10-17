@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
 import estilo from '../Products/DetalleProducto.module.css'
 import { useCarrito } from "../../Context/CarritoContext";
+import { db } from "../../firebase/config.js";
+import { doc, getDoc } from "firebase/firestore";
 
 
 const DetalleProducto = () => {
