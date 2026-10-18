@@ -12,12 +12,19 @@ const Links = () => {
             <ul >
                 <li ><Link to="/" className={estilo.navlink}>Inicio</Link></li>
                 <li><Link to="/productos">Productos</Link></li>
+
+                <li><Link to="/principal">Principales</Link></li>
+                <li><Link to="/accesorio">Accesorios</Link></li>
+                <li><Link to="/insumo">Insumos</Link></li>
+
                 <li><Link to= "/contacto">Contacto</Link></li>
                 <li><Link to="/carrito"> 🛒 {totalItems > 0 &&  
                 <span>{totalItems}</span>}
                 </Link>
                 </li>
             </ul>
+                 
+
         </div>
     );
 }   
