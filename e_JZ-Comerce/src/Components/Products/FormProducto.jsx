@@ -1,9 +1,79 @@
-// EN PROCESO
-
-const FromProducto = () => {
+const FormProducto = ({
+    manejarCambio,
+    manejarEnvio,
+    manejarCambioImagen,
+    datosForm,
+    cargando
+}) => {
     return (
+<>
+    <form onSubmit={manejarEnvio}>
+        <h3>NUEVO PRODUCTO</h3>
         <div>
-            <h1>Formulario de Producto</h1>
-            <form>
-                <label htmlFor="nombre">Nombre:</label> 
-                <input type="text" id="nombre" name="nombre" />
+        <label>Nombre:</label>
+        <input 
+        name="nombre"
+        type="text"
+        value={datosForm.nombre}
+        onChange={manejarCambio}
+        />
+        </div>
+         <div>
+        <label>Precio:</label>
+        <input
+          name="precio"
+          type="number"
+          value={datosForm.precio}
+          onChange={manejarCambio}
+        />
+      </div>
+      <div>
+        <label>Stock:</label>
+        <input 
+          name="stock"
+          type="number" 
+          value={datosForm.stock} 
+          onChange={manejarCambio} 
+        />
+      </div>
+      <div>
+        <label>Categoría:</label>
+        <select 
+          name="categoria" 
+          value={datosForm.categoria || ""} 
+          onChange={manejarCambio}
+          >
+          <option value="" disabled>Selecciona categoría</option>
+          <option value="principal">Principal</option>
+          <option value="insumo">Insumo</option>
+          <option value="accesorio">Accesorio</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Descripcion:</label>
+        <textarea
+          name="descripcion"
+          type="text" 
+          value={datosForm.descripcion} 
+          onChange={manejarCambio} 
+        />
+      </div>
+      <div>
+        <label>Imagen:</label>
+        <input 
+          name="imagen"
+          type="file"
+          onChange={manejarCambioImagen} 
+        />
+      </div>
+      <button type="submit" disabled={cargando}>
+        {cargando ? "Guardando..": "Guardar Producto"}
+      </button>
+
+        </form>
+    </>    
+    );
+};
+
+export default FormProducto;

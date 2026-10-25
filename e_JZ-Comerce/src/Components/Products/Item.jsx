@@ -12,7 +12,7 @@ const Item  = ({ id, nombre, precio, descripcion, stock, imagen}) => {
   return (
     <div className={estilo.item}>
       <h2 >{nombre}</h2>
-      <img src={(`./datos/images/${imagen}`)} alt={nombre} />
+      <img src={imagen}  />
       <p>{descripcion}</p>
       <p>Precio: AR${precio}</p>
       <p>Stock: {stock}</p>

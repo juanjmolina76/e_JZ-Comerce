@@ -13,9 +13,7 @@ const Carrito = () => {
     } = useCarrito();
 
 
-    const ubiImage = "/datos/images/"; // Ruta de la carpeta de imágenes
-
-
+   
     if (carrito.length === 0 ) {
         return (
             <div>
@@ -30,7 +28,7 @@ const Carrito = () => {
             <h1>Carrito de Compras</h1>
             {carrito.map(item => (
                 <div key={item.id} className={estilo.item} >
-                {item.imagen && <img src={ubiImage + item.imagen} alt={ubiImage + item.nombre} width="60" />}
+                {item.imagen && <img src={item.imagen} alt={item.nombre} width="60" />}
                <h4>{item.nombre}</h4>
                <p>Cantidad: {item.cantidad}</p>
                <p>Precio unitario: ${item.precio}</p>

@@ -17,7 +17,10 @@ const Links = () => {
                 <li><Link to="/accesorio">Accesorios</Link></li>
                 <li><Link to="/insumo">Insumos</Link></li>
 
+                
                 <li><Link to= "/contacto">Contacto</Link></li>
+                <li><Link to= "/panel">Panel</Link></li>
+
                 <li><Link to="/carrito"> 🛒 {totalItems > 0 &&  
                 <span>{totalItems}</span>}
                 </Link>

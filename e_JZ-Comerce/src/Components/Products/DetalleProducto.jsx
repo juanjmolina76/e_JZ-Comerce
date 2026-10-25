@@ -51,7 +51,7 @@ if (!producto) return <p>Producto no encontrado</p>;
         <Link to="/productos" className={estilo.volver}>Volver a productos</Link>
         <h2>Detalle del producto</h2>
         <p>Nombre: {producto.nombre}</p>
-        <img src={`/datos/images/${producto.imagen}`} alt={producto.nombre}/>
+        <img src={producto.imagen} alt={producto.nombre}/>
         <p>{producto.descripcion}</p>
         <p>Precio: AR${producto.precio}</p>
         <p>Stock: {producto.stock}</p>
