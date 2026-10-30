@@ -5,6 +5,8 @@ import FormProductoContainer from '../Components/Products/FormProductoContainer'
 
 const Panel = () => {
   const [productos, setProductos] = useState([]);
+  const [productoAEditar, setProductoAEditar] = useState(null);
+  const [modalAbierto, setModalAbierto] = useState(false);
 
   // Carga inicial de productos desde Firestore
   useEffect(() => {
@@ -40,31 +42,107 @@ const Panel = () => {
     }
   };
 
+
+
+
+
+
+
+ const abrirModalAgregar = () => {
+    setProductoAEditar(null);
+    setModalAbierto(true);
+  };
+
+  const abrirModalEditar = (producto) => {
+    setProductoAEditar(producto);
+    setModalAbierto(true);
+  };
+
+  const cerrarModal = () => {
+    setProductoAEditar(null);
+    setModalAbierto(false);
+  };
+
+
+
+
+
+  const handleProductoGuardado = (productoGuardado, esEdicion) => {
+    if (esEdicion) {
+      setProductos(prev => prev.map(p => p.id === productoGuardado.id ? productoGuardado : p));
+    } else {
+      setProductos(prev => [...prev, productoGuardado]);
+    }
+    cerrarModal();
+  };
+
+
+
+
+
+
+
   return (
     <>
       <h2>Panel de Administración</h2>
-      {/* Formulario de producto */}
-      <FormProductoContainer />
+      
+      <div>
+          <h3>Lista de Productos</h3>
+          <button onClick={abrirModalAgregar}>
+            <span> + </span> Agregar Producto
+          </button>
+      </div>
       <hr />
       
-      {/* Listado de productos */}
-      <h3>Lista de Productos</h3>
-      <ul>
-        {productos.map(prod => (
-          <li key={prod.id} style={{ marginBottom: '8px' }}>
-            {prod.nombre} - ${prod.precio}
-            <button 
-              onClick={() => eliminarProducto(prod.id)} 
-              style={{ marginLeft: '10px' }}
-            >
-              Eliminar
-            </button>
-          </li>
-        ))}
-      </ul>
 
+    {productos.length === 0 ? (
+      <p>No hay productos cargados todavia.</p>
+    ) : (
+
+      <div>
+        <ul>
+          {productos.map(prod => (
+            <li key={prod.id} style={{ marginBottom: '8px' }}>
+              {prod.nombre} - ${prod.precio}
+              <img src={prod.imagen} />
+              <button 
+                onClick={() => abrirModalEditar(prod)}
+              >Editar</button>
+              <button 
+                onClick={() => eliminarProducto(prod.id)} 
+                style={{ marginLeft: '10px' }}
+              >
+                Eliminar
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
       <hr />
+      {/*Modal para agregar o editar productos*/ }
+      {modalAbierto && (
+        <div >
+          <div>
+          <div>
+            <h3 >
+              {productoAEditar ? 'Editar Producto' : 'Agregar Nuevo Producto'}
+             </h3>
+            <button onClick={cerrarModal}>X</button>
 
+          </div>
+
+        <FormProductoContainer
+          productoAEditar={productoAEditar}
+          setProductoAEditar={setProductoAEditar}
+          onProductoAgregado={(producto, esEdicion) => handleProductoGuardado(producto, esEdicion)}
+        />
+
+          </div>
+        </div>
+
+
+      )}
      
     </>
   );

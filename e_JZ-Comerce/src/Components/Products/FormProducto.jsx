@@ -3,6 +3,7 @@ const FormProducto = ({
     manejarEnvio,
     manejarCambioImagen,
     datosForm,
+    esEdicion,
     cargando
 }) => {
     return (
@@ -59,6 +60,7 @@ const FormProducto = ({
           onChange={manejarCambio} 
         />
       </div>
+      {/*Campo Imagen*/}
       <div>
         <label>Imagen:</label>
         <input 
@@ -67,8 +69,19 @@ const FormProducto = ({
           onChange={manejarCambioImagen} 
         />
       </div>
+
+{/*Vista preiva si ya existe una imagen en edicion*/}
+{esEdicion && datosForm.imagen && (
+  <div>
+    <span >Imagen Actual: </span>
+    <br/>
+    <img src={datosForm.imagen} alt="vista previa"/>
+  </div>
+)}
+
+      
       <button type="submit" disabled={cargando}>
-        {cargando ? "Guardando..": "Guardar Producto"}
+        {cargando ? "Procesando..": esEdicion ? "Guardar Cambios" : "Crear Producto"}
       </button>
 
         </form>
