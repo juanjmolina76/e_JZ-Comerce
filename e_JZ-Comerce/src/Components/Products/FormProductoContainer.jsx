@@ -38,6 +38,10 @@ const FormProductoContainer = ({ productoAEditar, onProductoAgregado }) => {
       [name]: value,
       
     }));
+if (errores[name]) {
+  setErrores(prev => ({ ...prev, [name]: null }));
+}
+
   };
 
   const manejarCambioImagen = (evento) => {
@@ -51,7 +55,7 @@ const FormProductoContainer = ({ productoAEditar, onProductoAgregado }) => {
 
 const subirImagenImgbb = async (file) => {
 
-    const apiKey = "061bfceef1d958d4fe3eea7614117dd3"; // OCULTAR EN .env  
+    const apiKey = "cede94d994baeb71314353f0a77b618a"; // OCULTAR EN .env  
     const formData = new FormData();
     formData.append("image", file);
 
@@ -86,7 +90,7 @@ const subirImagenImgbb = async (file) => {
         precio: Number(datosForm.precio),
         stock: Number(datosForm.stock),
         categoria: String(datosForm.categoria.trim().toLowerCase()),
-        imagen: urlImagen
+        imagen: urlImagen//datos.data.url
       };
       
 //ACTUALIZO LA BASE DE DATOS
