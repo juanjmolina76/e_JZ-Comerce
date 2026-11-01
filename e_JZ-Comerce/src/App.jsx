@@ -8,7 +8,9 @@ import Carrito from './Pages/Carrito';
 import Productos from './Components/Products/Productos.jsx';
 import Categorias from './Pages/Categorias.jsx';
 import Panel from './Pages/Panel.jsx';
-
+import Login from './Pages/Login.jsx';
+import Registro from './Pages/Registro.jsx';
+import RutaProtegida from './Components/RutaProtegida.jsx';
 
 const App = () => {
   return (
@@ -18,11 +20,19 @@ const App = () => {
         <Route path="/" element={<Productos/>}/>
         <Route path="/contacto" element={<h1>CONTACTO</h1>}/>
         <Route path="/inicio" element={<Inicio/>}/>
-        <Route path="/panel" element={<Panel/>}/>
         <Route path="/productos" element= {<ItemListContainer/>}/>
         <Route path="/producto/:id" element={<DetalleProducto/>}/>
         <Route path="/:idCategoria" element={<Categorias/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path= "/registro" element={<Registro/>}/>
+
+        <Route path="/panel" element={
+          <RutaProtegida rolesPermitidos={["admin"]}>
+            <Panel />
+          </RutaProtegida>
+        }/>
+
         
       </Route>  
     </Routes>
