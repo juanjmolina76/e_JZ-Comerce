@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        // onAuthStateChanged es el observador de Firebase
+        // onAuthStateChanged es el OBSERVADOR de Firebase (unsuscribe = desvincular)
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
            if (currentUser) {
                 //si hay un usuario logueado, buscamos su rol en Firestore

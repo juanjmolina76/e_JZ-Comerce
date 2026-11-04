@@ -1,20 +1,42 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../firebase/config';
+import { useAuth } from '../Context/AuthContext'; // Importamos el hook personalizado para usar el contexto de autenticación
 
 const Registro = () => {
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
-  const auth = getAuth();
 
-  const handleSubmit = async (evento) => {
+  const navigate = useNavigate();
+  const { signup } = useAuth(); // Usamos el hook personalizado para obtener la función de registro
+  
+
+  const manejarSubmit = async (evento) => {
     evento.preventDefault();
     setError(null); // Reseteamos cualquier error previo
     try {
       // Intentamos crear el nuevo usuario en Firebase
-      await createUserWithEmailAndPassword(auth, email, password);
+      //await createUserWithEmailAndPassword(auth, email, password);
+
+      //Creamos el usuario usando la funcion 'signup' del AuthContext
+
+      const credencialUsuario = await signup(email, password);
+      const user = credencialUsuario.user;
+
+      //Guardo los datos adicianales en Firestore, usando el UID generado
+      await setDoc(doc(db, "usuarios", user.uid), {
+        nombre: nombre,
+        apellido: apellido,
+        email: email,
+        rol: "usuario", // Asignamos un rol por defecto
+      });
+      
+
+
       // Si la creación es exitosa, lo redirigimos al inicio
       // Firebase ya gestiona el estado de sesión automáticamente
       navigate("/");
@@ -47,7 +69,25 @@ const Registro = () => {
   return (
     <div className="auth-container">
       <h2>Crear una nueva cuenta</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={manejarSubmit}>
+        <div className="form-group">
+          <label>Nombre</label>
+          <input
+            type="text"
+            value={nombre}
+            onChange={(evento) => setNombre(evento.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Apellido</label>
+          <input
+            type="text"
+            value={apellido}
+            onChange={(evento) => setApellido(evento.target.value)}
+            required
+          />
+        </div>
         <div className="form-group">
           <label>Correo Electrónico</label>
           <input
