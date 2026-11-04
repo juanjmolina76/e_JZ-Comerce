@@ -17,12 +17,12 @@ const Login = () => {
             .then((userCredential) => {
                 const user = userCredential.user;
                 console.log("Usuario logueado:", user);
-                alert("Inicio de sesión exitoso");
-                navigate("/panel");
+                alert("Inicio de sesión exitoso");//hacer un modal reemplazando el alert
+                navigate("/");
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                const errorCode = error.code;// captura el codigo del error, por ejemplo: auth/wrong-password, auth/user-not-found, etc.
+                const errorMessage = error.message; //captura la descripcion del error
                 console.error("Error en el Login:", errorCode, errorMessage);
                 alert("Error en el Login: " + errorMessage);
             });

@@ -70,6 +70,7 @@ export const AuthProvider = ({ children }) => {
         logout,
     };
 // Retornar el Provides, asegurandonos de no renderizar hasta que cargue
+
 // esto evita qu elos componentes hijos puedan acceder al 'user' cuando es null
 
     return (
