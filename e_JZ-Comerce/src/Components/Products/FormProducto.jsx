@@ -1,3 +1,5 @@
+import styles from "./FormProducto.module.css";
+
 const FormProducto = ({
     manejarCambio,
     manejarEnvio,
@@ -10,7 +12,7 @@ const FormProducto = ({
 <>
     <form onSubmit={manejarEnvio}>
         <h3>NUEVO PRODUCTO</h3>
-        <div>
+        <div className={styles.input}>
         <label>Nombre:</label>
         <input 
         name="nombre"
@@ -19,7 +21,7 @@ const FormProducto = ({
         onChange={manejarCambio}
         />
         </div>
-         <div>
+         <div className={styles.input}>
         <label>Precio:</label>
         <input
           name="precio"
@@ -28,7 +30,7 @@ const FormProducto = ({
           onChange={manejarCambio}
         />
       </div>
-      <div>
+      <div className={styles.input}>
         <label>Stock:</label>
         <input 
           name="stock"
@@ -37,7 +39,7 @@ const FormProducto = ({
           onChange={manejarCambio} 
         />
       </div>
-      <div>
+      <div className={styles.input}>
         <label>Categoría:</label>
         <select 
           name="categoria" 

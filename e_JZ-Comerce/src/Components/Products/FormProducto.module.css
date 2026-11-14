@@ -1,0 +1,21 @@
+.input,
+.textarea
+{
+border: 1px solid green;
+width: 100%;
+padding: 0.75rem;
+border-radius: 20px;
+}
+
+label {
+font-weight: bold;
+color: green;
+}
+
+.placeholder {
+text-style: italic;
+text-family: lucida console;
+text-color: orange;
+}
+
+
