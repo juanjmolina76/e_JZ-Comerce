@@ -1,8 +1,9 @@
 import Links from "./Links";
+import estilo from "./Nav.module.css";
 
 const Nav = () => {
     return (
-        <div >
+        <div className={estilo.nav}>
             <nav >
                 <Links />
             </nav>
