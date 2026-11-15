@@ -1,8 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
-import  ArribaIcon  from "../../assets/icons/arriba.jsx";
-import AbajoIcon from "../../assets/icons/abajo.jsx";
+import { AbajoIcon, ArribaIcon } from "../../assets/icons/Iconos.jsx";
 
 //elimino el  children y lo reempazo por outlet
 const Layout = () => {
