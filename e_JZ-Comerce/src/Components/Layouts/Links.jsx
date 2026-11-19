@@ -12,23 +12,23 @@ const Links = () => {
 
     return (
         <div  >
-            <ul >
+            <ul  >
                 <li ><Link to="/" className={estilo.navlink}>Inicio</Link></li>
-                <li><Link to="/productos">Productos</Link></li>
+                <li><Link to="/productos" className={estilo.navlink}>Productos</Link></li>
 
-                <li><Link to="/principal">Principales</Link></li>
-                <li><Link to="/accesorio">Accesorios</Link></li>
-                <li><Link to="/insumo">Insumos</Link></li>
+                <li><Link to="/principal"className={estilo.navlink}>Principales</Link></li>
+                <li><Link to="/accesorio"className={estilo.navlink}>Accesorios</Link></li>
+                <li><Link to="/insumo"className={estilo.navlink}>Insumos</Link></li>
 
                 
-                <li><Link to= "/contacto">Contacto</Link></li>
+                <li><Link to= "/contacto"className={estilo.navlink}>Contacto</Link></li>
 
                 {/**/}
                          {user ? (
                 <>
                     {user.rol === "admin" && (
                         <li>
-                            <Link to="/panel">Panel</Link>
+                            <Link to="/panel"className={estilo.navlink}>Panel</Link>
                         </li>
                     )}
 

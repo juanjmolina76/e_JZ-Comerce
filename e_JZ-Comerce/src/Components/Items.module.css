@@ -1,8 +1,10 @@
 .item {
 display: flex;
-margin: auto 3em;
+margin: auto ;
 margin-bottom: 1em;
 margin-top: 1em;
+width: 500px;
+
 
 flex-direction: row;
 flex-wrap: wrap;
@@ -54,4 +56,39 @@ button {
 }
 button:hover {
      background-color: rgb(255, 225, 0);
+}
+
+
+
+@media (100px <= width <= 460px){ /*(min-width: 100px) and (max-width: 460px)*/
+	.item{
+		background:rgb(236, 201, 6);
+		flex-direction: column;
+		align-items: center;
+        font-size: 1rem;
+        gap: 0.5rem;
+        width: 300px;
+	}
+}
+
+    @media (461px <= width <= 768px){
+	.item{
+		background:rgb(222, 238, 6);
+        flex-direction: column;
+        font-size: 1.2rem;
+     
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        width: 400px;
+       
+	}
+}
+
+@media (769px <= width){
+	.item{
+		background:gold;
+        font-size: 1.2rem;
+	}
 }
