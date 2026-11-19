@@ -13,7 +13,6 @@ const estadoInicial = {
 };
 
 
-
 const FormProductoContainer = ({ productoAEditar, onProductoAgregado }) => {
   const [ datosForm, setDatosForm ] = useState(estadoInicial);
   const [imagen, setImagen] = useState(null);
@@ -55,7 +54,7 @@ if (errores[name]) {
 
 const subirImagenImgbb = async (file) => {
 
-    const apiKey = "cede94d994baeb71314353f0a77b618a"; // OCULTAR EN .env  
+    const apiKey = import.meta.env.VITE_IMGBB_APIKEY; // OCULTAR EN .env  
     const formData = new FormData();
     formData.append("image", file);
 
