@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { db } from '../firebase/config';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import FormProductoContainer from '../Components/Products/FormProductoContainer';
+import styles from './Panel.module.css';
 
 const Panel = () => {
   const [productos, setProductos] = useState([]);
@@ -84,6 +85,7 @@ const Panel = () => {
 
   return (
     <>
+    <div className={styles.container}>
       <h2>Panel de Administración</h2>
       
       <div>
@@ -99,12 +101,25 @@ const Panel = () => {
       <p>No hay productos cargados todavia.</p>
     ) : (
 
-      <div>
-        <ul>
+      <div className={styles}>
+        <table>
+          <thead>
+          <tr>
+            <th>nombre</th>
+            <th>precio</th>
+            <th>imagen</th>
+            <th>Edicion</th>
+         </tr>
+         </thead>
+         <tbody>
+          
           {productos.map(prod => (
-            <li key={prod.id} style={{ marginBottom: '8px' }}>
-              {prod.nombre} - ${prod.precio}
-              <img src={prod.imagen} />
+            <tr key={prod.id} >
+             <td> {prod.nombre} </td>
+             <td> ${prod.precio}</td>
+             <td><img src={prod.imagen} /></td>
+            
+              <td style={{ textAlign: 'right'}}>
               <button 
                 onClick={() => abrirModalEditar(prod)}
               >Editar</button>
@@ -114,16 +129,18 @@ const Panel = () => {
               >
                 Eliminar
               </button>
-            </li>
+              </td>
+            </tr>
           ))}
-        </ul>
+          </tbody>
+        </table>
       </div>
     )}
       <hr />
       {/*Modal para agregar o editar productos*/ }
       {modalAbierto && (
-        <div >
-          <div>
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
           <div>
             <h3 >
               {productoAEditar ? 'Editar Producto' : 'Agregar Nuevo Producto'}
@@ -143,7 +160,7 @@ const Panel = () => {
 
 
       )}
-     
+     </div>
     </>
   );
 };

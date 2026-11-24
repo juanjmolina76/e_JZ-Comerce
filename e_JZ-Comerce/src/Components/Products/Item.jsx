@@ -1,5 +1,5 @@
 import { useState } from "react";
-import estilo from '../Items.module.css';    
+import estilo from './Items.module.css';    
 import { Link } from "react-router-dom";
 
 const Item  = ({ id, nombre, precio, descripcion, stock, imagen}) => {

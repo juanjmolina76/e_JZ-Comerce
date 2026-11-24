@@ -1,5 +1,5 @@
 import { useCarrito } from '../Context/CarritoContext';
-import estilo from '../Components/Items.module.css';
+import estilo from '../Components/Products/Items.module.css';
 
 const Carrito = () => {
     const { carrito, 
