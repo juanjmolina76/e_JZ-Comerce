@@ -1,3 +1,14 @@
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #111; 
+}
+
+
 .input,
 .textarea
 {
@@ -8,14 +19,13 @@ margin: 5px;
 border-radius: 20px;
 box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
             -7px -7px 20px rgba(0, 0, 0, 0.2);
-
-
 }
+
+
 
 label {
 font-weight: bold;
 color: rgb(6, 129, 6);
 
 }
-
 

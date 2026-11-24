@@ -10,6 +10,7 @@ const FormProducto = ({
 }) => {
     return (
 <>
+    <div className={styles.formulario}>
     <form onSubmit={manejarEnvio}>
         <h3>NUEVO PRODUCTO</h3>
         <div className={styles.input}>
@@ -87,6 +88,7 @@ const FormProducto = ({
       </button>
 
         </form>
+      </div>
     </>    
     );
 };
