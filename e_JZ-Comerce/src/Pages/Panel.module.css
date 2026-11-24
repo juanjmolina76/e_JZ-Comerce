@@ -4,7 +4,7 @@
   padding: 2rem 1rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #111;
-  background-color: #fff;
+  background-color: #f8e884;
 }
 
 
@@ -50,7 +50,7 @@ table {
   width: 100%;
 }
 th {
-  background-color: #e1d5d5;
+  background-color: #d1d40d;
   padding: 2px;
 }
 
@@ -62,9 +62,9 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: #efe1ec;
+  background-color: #edd81e;
 }
 
 tr:nth-child(even) {
-  background-color: #f3ecf2;
+  background-color: #f5ed12;
 }
